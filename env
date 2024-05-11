@@ -1,0 +1,2 @@
+MONGO_URI=mongodb://localhost:27017/imdb
+SECRET_KEY=some-secret
