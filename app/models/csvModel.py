@@ -2,7 +2,6 @@ from app.extensions import mongo
 class CSVModel:
     @classmethod
     def upload_csv(cls, filename, total_records):
-        # Insert upload data into MongoDB
         upload_data = {
             'filename': filename,
             'progress': 0,  # Initial progress
@@ -12,7 +11,6 @@ class CSVModel:
 
     @classmethod
     def update_progress(cls, filename, progress):
-        # Update progress for a specific user's upload
         mongo.db.uploads_collection.update_one(
             {'filename': filename},
             {'$set': {'progress': progress}}
@@ -20,5 +18,4 @@ class CSVModel:
 
     @classmethod
     def get_progress(cls, filename):
-        # Retrieve progress for a specific user's upload
         return mongo.db.uploads_collection.find_one({'filename': filename}, {'_id': 0, 'progress': 1})

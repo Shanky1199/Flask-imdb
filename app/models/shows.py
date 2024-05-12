@@ -8,9 +8,9 @@ class Shows:
         self.type = show['type']
         self.description = show['description']
         self.duration = show['duration']
-        self.cast_ids = show['cast_ids']  # Assuming cast_ids is a list of cast MongoDB IDs
-        self.genre_ids = show['genre_ids']  # Assuming genre_ids is a list of genre MongoDB IDs
-        self.ratings_id = show['ratings_id']  # Assuming ratings_id is the ratings MongoDB ID
+        self.cast_ids = show['cast_ids']  
+        self.genre_ids = show['genre_ids'] 
+        self.ratings_id = show['ratings_id']  
 
     def to_dict(self):
         return {

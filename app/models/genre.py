@@ -3,7 +3,6 @@ from app.extensions import mongo
 
 from bson import ObjectId
 
-
 class Genre:
     def __init__(self, listed_in):
         self.listed_in = listed_in

@@ -56,7 +56,6 @@ def init_app(app):
 
     @app.route('/create_user', methods=['POST'])
     def create_user():
-        # Extract data from request, ensuring it's a JSON request
         data = request.get_json()
         if not data:
             return jsonify({'error': 'No input data provided'}), 400
